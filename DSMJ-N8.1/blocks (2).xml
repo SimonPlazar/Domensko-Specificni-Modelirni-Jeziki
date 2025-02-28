@@ -1,0 +1,71 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="start_block" id="cZG{avDcM]WJ4y}3rq:R" x="120" y="-405">
+    <next>
+      <block type="pick_color" id="?p@kI_E%;r[;@UoTY.H~">
+        <field name="COLOR">RED</field>
+        <next>
+          <block type="controls_repeat_ext" id="av5Pc1HjC02cj)#?L3Tb">
+            <value name="TIMES">
+              <shadow type="math_number" id="@dZ28[B#JQe^]~UizcB(">
+                <field name="NUM">4</field>
+              </shadow>
+            </value>
+            <statement name="DO">
+              <block type="controls_repeat_ext" id=",d@owU[NNz9G/+,kxLEh">
+                <value name="TIMES">
+                  <shadow type="math_number" id="V1Z4oXy{dSPSCzg{[Un3">
+                    <field name="NUM">3</field>
+                  </shadow>
+                </value>
+                <statement name="DO">
+                  <block type="move_forward" id="E#_PA@!dZ=qu+s_q:2q8">
+                    <next>
+                      <block type="controls_if" id="!kySo7xc[6%Xe;WTy$]S">
+                        <mutation elseif="1" else="1"></mutation>
+                        <value name="IF0">
+                          <block type="check_color" id="SaA5Ibd=`#w?7=lvE27%">
+                            <field name="COLOR">RED</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="pick_color" id="7-qv)ghlXUyZz=dUp}(~">
+                            <field name="COLOR">GREEN</field>
+                          </block>
+                        </statement>
+                        <value name="IF1">
+                          <block type="check_color" id="i:/?0gnV[zX4=I2Bs[~=">
+                            <field name="COLOR">GREEN</field>
+                          </block>
+                        </value>
+                        <statement name="DO1">
+                          <block type="pick_color" id="]S6/?w/q:5q(@2ncXO!J">
+                            <field name="COLOR">BLUE</field>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="pick_color" id="X/ML1z4xG}5]MySx3b#e">
+                            <field name="COLOR">RED</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="paint_square" id="c~3,@=G?E_oXE/wcRZyA"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="move_forward" id="q|ZBIeiJS*6SEd1K8gIl">
+                    <next>
+                      <block type="turn_right" id="uF:c1eJzhI#;[{)7.LK]"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

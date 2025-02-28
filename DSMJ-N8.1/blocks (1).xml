@@ -1,0 +1,102 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="EceEHFCGZE!k96FXqFDM">j</variable>
+    <variable id="Ob,o?9^/zsBA)CWeexoR">i</variable>
+  </variables>
+  <block type="start_block" id="cZG{avDcM]WJ4y}3rq:R" x="120" y="-405">
+    <next>
+      <block type="pick_color" id="?p@kI_E%;r[;@UoTY.H~">
+        <field name="COLOR">RED</field>
+        <next>
+          <block type="variables_set" id="ij;rTP*gUL3V}``jc]NR">
+            <field name="VAR" id="EceEHFCGZE!k96FXqFDM">j</field>
+            <value name="VALUE">
+              <block type="math_number" id="I96JW^2N~A.=v2~C)CfG">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_repeat_ext" id="`J5VjS;n`+Nb]]MLx+DW">
+                <value name="TIMES">
+                  <shadow type="math_number" id="Xj;Hz(~RPk,0kKWe#d!9">
+                    <field name="NUM">4</field>
+                  </shadow>
+                </value>
+                <statement name="DO">
+                  <block type="controls_repeat_ext" id="1kpSPGz_K]d3|JS:CgRU">
+                    <value name="TIMES">
+                      <shadow type="math_number" id="k7R-$XM8x`]L)ac5l1,z">
+                        <field name="NUM">4</field>
+                      </shadow>
+                    </value>
+                    <statement name="DO">
+                      <block type="variables_set" id="vro9_rcRbSYwB|bRA/ch">
+                        <field name="VAR" id="Ob,o?9^/zsBA)CWeexoR">i</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="S=KLii(,Tv|-!%Jn%lgG">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_whileUntil" id="heXP6Xqz5?T5}p$@{^F5">
+                            <field name="MODE">WHILE</field>
+                            <value name="BOOL">
+                              <block type="logic_compare" id="SOYb9;8Ou@NrBnyL-^%6">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="mfNKV?(SN;-CF^8:#?-~">
+                                    <field name="VAR" id="Ob,o?9^/zsBA)CWeexoR">i</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="2!;*Rr,;EI(9nu]bojn`">
+                                    <field name="VAR" id="EceEHFCGZE!k96FXqFDM">j</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="paint_square" id="BOKwGu3(=UTAbj#I~i`4">
+                                <next>
+                                  <block type="move_forward" id="6}$Vapg}5or9YlJ{)D=}">
+                                    <next>
+                                      <block type="math_change" id="i0Z@Gjv:Y(e#F85s[*D0">
+                                        <field name="VAR" id="Ob,o?9^/zsBA)CWeexoR">i</field>
+                                        <value name="DELTA">
+                                          <shadow type="math_number" id="-zm9?k5L,j%UBCX+|^?a">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="turn_right" id="JMq^~|hik`rOWQ.xXk~2"></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="math_change" id="_=([1/ax,*%B_xWd_hzO">
+                        <field name="VAR" id="EceEHFCGZE!k96FXqFDM">j</field>
+                        <value name="DELTA">
+                          <shadow type="math_number" id="H/+`yD@ZtN2(Sk4N`x$9">
+                            <field name="NUM">-1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,101 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="start_block" id="cZG{avDcM]WJ4y}3rq:R" x="120" y="-405">
+    <next>
+      <block type="pick_color" id="05$ZiR4wYWS5P/3`8/ik">
+        <field name="COLOR">RED</field>
+        <next>
+          <block type="controls_if" id="go;7p_q*U+7e25NWfLv=">
+            <value name="IF0">
+              <block type="logic_compare" id="fC/hT.{hZk]Bk,hpiHQq">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="logic_boolean" id="Op+(!x3cOk^z4b`n8d0N">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="check_color" id="x25:/E5Zd,=Z(Bm.Vonj">
+                    <field name="COLOR">RED</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="pick_color" id="P4%hFR5=:SWiBpDNj4FV">
+                <field name="COLOR">GREEN</field>
+              </block>
+            </statement>
+            <next>
+              <block type="paint_square" id="0,85$MZIr*D2U35VmaS}">
+                <next>
+                  <block type="controls_repeat_ext" id="p8_BNx$A5YrtIWV@^Kuy">
+                    <value name="TIMES">
+                      <shadow type="math_number" id="zITAlAC};Q+;iyNGn{qs">
+                        <field name="NUM">2</field>
+                      </shadow>
+                    </value>
+                    <statement name="DO">
+                      <block type="controls_repeat_ext" id="bYNhENk2BqX?ZVebEZV)">
+                        <value name="TIMES">
+                          <shadow type="math_number" id="ci7B:1fz$6To5+P4]WoP">
+                            <field name="NUM">5</field>
+                          </shadow>
+                        </value>
+                        <statement name="DO">
+                          <block type="move_forward" id="`:NJXL^yykIqCT+c3uNf">
+                            <next>
+                              <block type="paint_square" id=";m{N9V.?LE`A+EZ?F#|N"></block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="turn_right" id="k%JhRfq.(~i.-o-7t@+2">
+                            <next>
+                              <block type="move_forward" id=")X2*U%F%l,[g=,?1A6gl">
+                                <next>
+                                  <block type="turn_right" id="!mf=$-hCsQ-flyxyw}Ia">
+                                    <next>
+                                      <block type="controls_repeat_ext" id="1*A{42YJugo(3g2g-@HJ">
+                                        <value name="TIMES">
+                                          <shadow type="math_number" id="j,7~}urzJa3x]4(o7@L2">
+                                            <field name="NUM">5</field>
+                                          </shadow>
+                                        </value>
+                                        <statement name="DO">
+                                          <block type="move_forward" id="(jUN4y%^5_^Y;}fUJXIa">
+                                            <next>
+                                              <block type="paint_square" id="]3]9h+=Y8s/5Bhkv^LpD"></block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="turn_left" id="9=]r9$8P1Qjyc:`:nQ9J">
+                                            <next>
+                                              <block type="move_forward" id="#*Jp8ZPGsp.)j2o8(Q._">
+                                                <next>
+                                                  <block type="turn_left" id="!9ou8z^o=wu)~-6H`rOZ"></block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
