@@ -1,3 +1,6 @@
 [submodule "DSMJ-MusicDB"]
 	path = DSMJ-MusicDB
 	url = https://github.com/SimonPlazar/DSMJ-MusicDB.git
+[submodule "DSMJ-MPS"]
+	path = DSMJ-MPS
+	url = https://github.com/SimonPlazar/DSMJ-MPS.git
