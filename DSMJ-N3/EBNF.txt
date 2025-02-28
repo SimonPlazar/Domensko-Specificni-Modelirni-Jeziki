@@ -1,0 +1,29 @@
+root = "name: " name "title: " title "description: " description "routing:{" routing "}" "api:{" api "}"  "components:{" components "}" "style:{" style "}"
+
+name = STRING
+title = STRING
+description = STRING
+
+routing = route*
+route = STRING ":{" "url: " STRING ("|| " STRING)+ access+ "}"
+access = "PublicOnlyRoute" | "PrivateOnlyRoute"
+
+api = "base: " STRING "port: " INT apis*
+apis = STRING ":{" "route: " STRING "endpoints:{" endpoint* "}}"
+endpoint = STRING ":{" "url: " STRING "method: " method "auth: " auth
+method = GET | POST | PATCH | DELETE
+auth = TRUE | FALSE
+
+components = "filterSidebar:{" filterSidebar "} SongsView:{" SongsView "}"
+filterSidebar = ("filtersBasePath: " STRING)+ "filters: " filters (", " filters)+
+filters = "Album" | "Artist" | "Title" | "Genre" | "Year" | "Duration" | "Format" | "Bitrate"
+SongsView = defaultRows: " INT)+ ("defaultCols: " INT)+ "shownAttributes: " attributes (", " attributes)+
+attributes = "Album" | "Artist" | "Title" | "Genre" | "Year" | "Duration" | "Format" | "Bitrate" | "AlbumArtist" | "TrackNumber" | "DiscNumber"
+
+style = "preset: " variant "palette:{" palette+ "} components:{" styleComponents "}"
+variant = "DEFAULT" | "MINIMAL" | "MODERN"
+palette = "primary: " STRING | "secondary: " STRING | "background: " STRING | "backgroundPaper: " STRING | "backgroundSecondary: " STRING | "backgroundSecondaryPaper: " STRING
+styleComponents = (componentName ": " variant)+ ("songView: " ("DEFAULT" | "MODERN"))+ object+
+componentName = "header" | "footer" | "contact" | "privacy" | "landing" | "tos" | "IO"
+object = STRING ":{" (object | attribute)+ "}"
+attribute = STRING ": " (STRING | INT)

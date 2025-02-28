@@ -1,0 +1,71 @@
+name: Notes Application
+title: Notes Application
+description: All info about TODO work (home, work, shopping)
+
+port: 4100
+
+components:
+  - title: Home
+    url: /
+	menu: yes
+  - title: All
+    url: /all
+	menu: yes
+  - title: ToDo
+    url: /items-todo
+	menu: yes
+  - title: Done
+    url: /items-done    
+	menu: yes
+  - title: About
+    url: /about    
+	menu: yes
+  - title: Profile
+    url: /profile    
+	menu: no
+  - title: Login
+    url: /login    
+	menu: no
+  - title: Logout
+    url: /logout    
+	menu: no
+  - title: Header
+    url: /header    
+	menu: no
+	
+api:
+	- base: http://localhost:3000/
+	- endpoints:
+	 	- name: items 
+		  url: items	
+		- name: todo 
+		  url: items-todo	
+
+show:
+  nav menu: yes
+  header: yes Header
+  toolbar menu: yes Header
+  footer: no
+  
+Render:
+	Home =>
+		#Home...
+	All  =>
+		#All notes#
+		
+		| Note item               | Category             | Done                 |
+		| :---------------------- | ------------------:  | -------------------: |
+		| $api (items: name)      | $api(items: category)| $api(items: done)    |
+
+	ToDo
+		#ToDO...
+	Done
+		#Done...
+	About
+		#About...  
+	Profile
+		#Profile...
+	Login
+		#Login...  
+	Logout
+		#Logout...  

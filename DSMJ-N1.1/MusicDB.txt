@@ -1,0 +1,148 @@
+name: MusicDB
+title: Song Management Database
+description: A web application for managing and editing a song catalog
+
+routing:
+{	
+	LandingPage:{
+		url: / || /landing
+		PublicOnlyRoute
+	}
+	
+	Login:{
+		url: /login
+		PublicOnlyRoute
+	}
+	
+	Dashboard:{
+		url: /dashboard
+		PrivateOnlyRoute
+	}
+	
+	ImportExport:{
+		url: /import-export
+		PrivateOnlyRoute
+	}
+	
+	ContactUs:{
+		url: /contact
+	}
+	
+	PrivacyPolicy:{
+		url: /privacy
+	}
+	
+	TermsOfService:{
+		url: /tos
+	}
+	
+	Settings:{
+		url: /settings
+		PrivateOnlyRoute
+	}
+}
+
+api:{
+	base: http://localhost:
+	port: 5000
+	Songs:{
+		route: /songs
+		endpoints:{
+			getSongs:{
+				url: /
+				method: GET
+				auth: true
+			}
+			createSong:{
+				url: /
+				method: POST
+				auth: true
+			}
+			createMultipleSongs:{
+				url: /mesongs
+				method: POST
+				auth: true
+			}
+			updateSong:{
+				url: /:id
+				method: PATCH
+				auth: true
+			}
+			deleteSong:{
+				url: /:id
+				method: DELETE
+				auth: true
+			}
+			deleteMultipleSongs:{
+				url: /multiple
+				method: DELETE
+				auth: true
+			}
+		}
+	}
+	Users:{
+		route: /user
+		endpoints:{
+			checkLogin:{
+				url: /me
+				method: GET
+				auth: true
+			}
+			googleLogin:{
+				url: /google
+				method: post
+				auth: false
+			}
+			getSettings:{
+				url: /settings
+				method: GET
+				auth: true
+			}
+			updateSettings:{
+				url: /settings
+				method: PATCH
+				auth: true
+			}
+			
+		}
+	}
+}
+
+components:{
+	filterSidebar:{
+		filtersBasePath: client/src/components/Dashboard/Filters
+		filters: Album, Artist, Title, Genre, Year
+		genres: 
+	}
+	SongsView:{
+		defaultRows: 5
+		defaultCols: 3
+		shownAttributes: artist, title, album, genre, duration,
+	}
+}
+
+style:{
+	preset: default
+	palette:{
+		primary: #2196f3
+        	secondary: #ff4081
+        	background: #fafafa
+		backgroundPaper: #ffffff
+        	backgroundSecondary: #eeeeee
+		backgroundSecondaryPaper: #e0e0e0
+	}
+	components:{
+		header: default
+		footer: default
+		buttons:{
+			error:{
+				backgroundColor: '#2196f3'
+                		color: '#ffffff'
+                		onHover:{
+					backgroundColor: '#219600'
+					color: '#ffff00'
+				}
+			}
+		}
+	}
+}
